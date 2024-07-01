@@ -1,0 +1,30 @@
+[project]
+name = "PyPasta"
+version = "0.0.1"
+description = ""
+authors = [{name = "Paweł Ordyna", email = "p.ordyna@hzdr.de"}]
+readme = "README.md"
+
+dependencies=[
+    "pint >= 0.22",
+    "numpy",
+    "scipy",
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+line-length = 100
+
+[tool.docformatter]
+recursive = true
+pre-summary-space = true
+wrap-summaries = 100
+wrap-descriptions = 100
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "src"
+]

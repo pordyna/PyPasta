@@ -1,0 +1,26 @@
+PyPasta_version = "0.0.1"
+[scan]
+type = "group"
+combine_method = "product"
+[scan.set1]
+type = "set"
+sampling_method = "halton"
+n_samples = 100
+seed = 42
+[scan.set1.bounds]
+prepulse_delay = [0, 20e-12]
+prepulse_a0 = [0.068, 0.8328]
+main_pulse_a0 =[38, 47] # more or less +- 20% aorund 43}
+[scan.set1.units]
+main_pulse_a0 = ''
+prepulse_a0 = ''
+prepulse_delay = 's'
+
+[scan.set2]
+type = "set"
+sampling_method = "static"
+[scan.set2.values]
+prepulse_direction = [0, 135, 90]
+
+[scan.set2.units]
+prepulse_direction = 'deg'
