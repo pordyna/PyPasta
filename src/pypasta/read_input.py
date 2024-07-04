@@ -32,7 +32,9 @@ def _process_group(group: dict) -> ParamDict:
 
 
 def _process_table(table) -> ParamDict:
-    assert 'type' in table
+    if isinstance(table, ParamDict):
+        return table
+    assert 'type' in table, f"{table}"
     if table['type'] == 'set':
         return _process_scan_set(table)
     if table['type'] == 'group':
