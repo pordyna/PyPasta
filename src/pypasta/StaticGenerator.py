@@ -11,7 +11,7 @@ class StaticGenerator:
                                table['units'],
                                )
 
-    def __init__(self, parameters: Dict, units: List[str]):
+    def __init__(self, parameters: Dict, units: Dict[str, str]):
         self.param_dict = parameters
         for param, param_array in self.param_dict.items():
             self.param_dict[param] = param_array * ureg.Unit(units[param])

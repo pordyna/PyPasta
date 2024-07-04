@@ -10,5 +10,5 @@ if __name__ == '__main__':
     args = arg_parser.parse_args()
     parameters = process_input(args.input_file)
     parameters = parameters.to_data_frame()
-    parameters.to_csv(args.output_file)
+    parameters.to_csv(args.output_file, index_label="case_index")
 

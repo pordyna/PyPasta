@@ -14,7 +14,7 @@ class HaltonGenerator:
                                table['seed'],
                                )
 
-    def __init__(self, bounds: Dict, n_samples: int, units: List[str], seed: int):
+    def __init__(self, bounds: Dict, n_samples: int, units: Dict[str, str], seed: int):
         self.bounds = bounds
         self.parameters = list(bounds.keys())
         self.n_samples = n_samples
