@@ -1,6 +1,7 @@
 import tomllib
 from .HaltonGenerator import HaltonGenerator
 from .StaticGenerator import StaticGenerator
+from .LinSpace import LinSpace
 from functools import reduce
 from .ParamDict import ParamDict
 
@@ -11,6 +12,8 @@ def _process_scan_set(scan_set: dict) -> ParamDict:
         generator = HaltonGenerator.from_toml_table(scan_set)
     elif method == "static":
         generator = StaticGenerator.from_toml_table(scan_set)
+    elif method == "lin_space":
+        generator = LinSpace.from_toml_table(scan_set)
     else:
         raise ValueError(f"Unknown sampling method {method}")
     return generator()
