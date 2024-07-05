@@ -18,7 +18,7 @@ class LinSpace:
 
     def __init__(self, start: float, stop: float, n_samples: int, endpoint: bool, name: str, units: Dict[str, str]):
 
-        self.param_dict = {name, np.linspace(start,
+        self.param_dict = {name: np.linspace(start,
                                              stop, n_samples,
                                              endpoint=endpoint) * ureg.Unit(units[name])}
 
