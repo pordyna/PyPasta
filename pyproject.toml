@@ -9,6 +9,7 @@ dependencies=[
     "pint >= 0.22",
     "numpy",
     "scipy",
+    "scipp",
 ]
 
 [build-system]
