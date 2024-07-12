@@ -12,6 +12,9 @@ dependencies=[
     "scipp",
 ]
 
+[project.scripts]
+pypasta = "pypasta:run_pypasta_cli"
+
 [build-system]
 requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
