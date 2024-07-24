@@ -4,7 +4,7 @@ version = "0.0.1"
 description = ""
 authors = [{name = "Paweł Ordyna", email = "p.ordyna@hzdr.de"}]
 readme = "README.md"
-
+requires-python = ">= 3.11"
 dependencies=[
     "pint >= 0.22",
     "numpy",
